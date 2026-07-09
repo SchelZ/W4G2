@@ -120,7 +120,7 @@ climate::ClimateTraits AirConditioner::traits() {
       {climate::CLIMATE_SWING_OFF, climate::CLIMATE_SWING_BOTH,
        climate::CLIMATE_SWING_VERTICAL, climate::CLIMATE_SWING_HORIZONTAL});
 
-  traits.set_supports_current_temperature(true);
+  traits.add_feature_flags(climate::CLIMATE_SUPPORTS_CURRENT_TEMPERATURE);
   traits.set_visual_target_temperature_step(1.0f);
 
   return traits;
