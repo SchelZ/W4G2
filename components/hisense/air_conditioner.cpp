@@ -228,7 +228,7 @@ void AirConditioner::send_status() {
     } else if (next_swing_setting == climate::ClimateSwingMode::CLIMATE_SWING_OFF) {
       status[32] = 0b01010000;
     } else if (next_swing_setting == climate::ClimateSwingMode::CLIMATE_SWING_VERTICAL) {
-      status[32] = 0b10110000;
+      status[32] = 0b11010000;
     } else if (next_swing_setting == climate::ClimateSwingMode::CLIMATE_SWING_HORIZONTAL) {
       status[32] = 0b01110000;
     }
