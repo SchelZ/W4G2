@@ -225,14 +225,11 @@ void AirConditioner::send_status() {
     auto next_swing_setting = next_hvac_settings.swing_mode;
     if (next_swing_setting == climate::ClimateSwingMode::CLIMATE_SWING_BOTH) {
       status[32] = 0b11110000;
-    } else if (next_swing_setting ==
-               climate::ClimateSwingMode::CLIMATE_SWING_OFF) {
+    } else if (next_swing_setting == climate::ClimateSwingMode::CLIMATE_SWING_OFF) {
       status[32] = 0b01010000;
-    } else if (next_swing_setting ==
-               climate::ClimateSwingMode::CLIMATE_SWING_VERTICAL) {
-      status[32] = 0b00110000;
-    } else if (next_swing_setting ==
-               climate::ClimateSwingMode::CLIMATE_SWING_HORIZONTAL) {
+    } else if (next_swing_setting == climate::ClimateSwingMode::CLIMATE_SWING_VERTICAL) {
+      status[32] = 0b10110000;
+    } else if (next_swing_setting == climate::ClimateSwingMode::CLIMATE_SWING_HORIZONTAL) {
       status[32] = 0b01110000;
     }
   }
